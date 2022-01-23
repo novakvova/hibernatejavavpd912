@@ -26,22 +26,22 @@ public class Main {
 //            System.out.println(role);
         //context.close();
 
-        Author peter=new Author();
-        peter.setFullName("Петро Могильов");
-        Author ivan=new Author();
-        ivan.setFullName("Іван Підкаблучник");
-
-        Book garik = new Book();
-        garik.setName("Гарі потер");
-        garik.setAuthor(peter);
-
-        Book rusalka = new Book();
-        rusalka.setName("Русалка на прогулці");
-        rusalka.setAuthor(ivan);
-
-        Book slavik = new Book();
-        slavik.setName("Походи Славіка");
-        slavik.setAuthor(ivan);
+//        Author peter=new Author();
+//        peter.setFullName("Петро Могильов");
+//        Author ivan=new Author();
+//        ivan.setFullName("Іван Підкаблучник");
+//
+//        Book garik = new Book();
+//        garik.setName("Гарі потер");
+//        garik.setAuthor(peter);
+//
+//        Book rusalka = new Book();
+//        rusalka.setName("Русалка на прогулці");
+//        rusalka.setAuthor(ivan);
+//
+//        Book slavik = new Book();
+//        slavik.setName("Походи Славіка");
+//        slavik.setAuthor(ivan);
 
         SessionFactory sessionFactory =null;
         Session session = null;
@@ -52,12 +52,19 @@ public class Main {
             System.out.println("Session open");
             tx=session.beginTransaction();
 
-            session.save(peter);
-            session.save(ivan);
+//            Author author = session.get(Author.class, 2);
+//            author.setFullName("Вася Шморгунов");
+            //session.delete(author);
 
-            session.save(garik);
-            session.save(rusalka);
-            session.save(slavik);
+//             Book book = session.get(Book.class, 1);
+//            session.delete(book);
+
+//            session.save(peter);
+//            session.save(ivan);
+//
+//            session.save(garik);
+//            session.save(rusalka);
+//            session.save(slavik);
 
             tx.commit();
 
