@@ -52,8 +52,8 @@ public class Main {
             System.out.println("Session open");
             tx=session.beginTransaction();
 
-//            Author author = session.get(Author.class, 2);
-//            author.setFullName("Вася Шморгунов");
+            Author author = session.get(Author.class, 2);
+            author.setFullName("Вася ++ Шморгунов");
             //session.delete(author);
 
 //             Book book = session.get(Book.class, 1);
