@@ -15,6 +15,9 @@ public class Author {
     @Column(name="full_name", length = 200, nullable = false)
     private String fullName;
 
+    @Column(length = 200, nullable = true)
+    private String image;
+
     @OneToMany(mappedBy="author")
     private Set<Book> books;
 }
