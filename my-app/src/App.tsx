@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import "./App.css";
-import { Col, Row } from "antd";
+import { Col, Row, Button } from "antd";
 import CropperModal from "./common/CropperModal";
 import http, { urlBackend } from "./http_common";
 
@@ -24,6 +24,14 @@ function App() {
     );
   });
 
+  const handleAddBook= async () => {
+    await http.post("addbook", {
+      authorId: 1, 
+      name: "Букварик не для дітей",
+      images
+    });
+  }
+
   return (
     <>
       <h1>Hello react</h1>
@@ -34,6 +42,11 @@ function App() {
             <CropperModal onSelected={handleSelected} />
           </Col>
         </Row>
+      </div>
+      <div>
+      <Button type="primary" onClick={handleAddBook}>
+        Додати книжку
+      </Button>
       </div>
     </>
   );
